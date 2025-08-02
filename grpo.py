@@ -23,6 +23,15 @@ def rollout(
     device: torch.device, # 计算设备（CPU/GPU）
     dtype: torch.dtype, # 计算数据类型（float16/float32）
 ) -> List[Episode]: # 返回生成的Episode列表
+    """
+    Rollout阶段：生成答案
+    1. 初始化KV缓存
+    2. 初始化tokens
+    3. 遍历每个位置
+    4. 计算logits
+    5. 采样下一个token
+    6. 更新tokens
+    """
     end_token = tokenizer.eos_token # 结束标记
     end_token_id = tokenizer.eos_token_id # 结束标记ID
     pad_token_id = tokenizer.pad_token_id # 填充标记ID
