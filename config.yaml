@@ -1,9 +1,9 @@
 model:
-  pretrained_model_path: "Qwen2.5-3B-Instruct"
+  pretrained_model_path: "/mnt/cache/huangzhiyuan/models/Qwen/Qwen2.5-3B-Instruct"
   device: "cuda"
   dtype: "bfloat16"
 data:
-  path: "Countdown-Tasks-3to4"
+  path: "/mnt/cache/huangzhiyuan/data/Jiayi-Pan/Countdown-Tasks-3to4"
   test_size: 128
 training:
   random_seed: 1337
